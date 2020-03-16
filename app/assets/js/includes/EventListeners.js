@@ -16,9 +16,7 @@ exports.getLexiconPage = function(){
     Elements.lexiconLi.classList.add('active');
     Elements.calculatorLi.classList.remove('active');
 }
-exports.analizeDocument = function(){
-    showLoading();
-}
+
 function showLoading(){
    Elements.resultScreen.classList.add('hide-display');
    Elements.calculatorAnimation.classList.remove('hide-display');
@@ -28,13 +26,27 @@ function showResults(){
     Elements.calculatorAnimation.classList.add('hide-display');
     Elements.resultScreen.classList.remove('hide-display');
 }
-exports.readFile = function(){
-    let input = event.target;
-    let reader = new FileReader();
-    reader.onload = function(){
-      let text = reader.result;
-      //console.log(text)
-    };
-    let output = reader.readAsText(input.files[0]);
-    console.log(output);
+
+
+exports.analizeDocument = function(){
+    let input = Elements.buttonUpload;
+
+    if(input.files[0]){
+            let reader = new FileReader();
+            reader.onload = function(){
+                convertTextToArray(reader.result);
+            };
+            reader.readAsText(input.files[0]);   
+        }
+    
+
+
+    //Elements.calculatorMessage.textContent = message;
+    showLoading();
+   // return resultText;
+    
+}
+function convertTextToArray(text){
+   let newText = text.split(/[ ,]+/).filter(Boolean);
+    console.log(newText);
 }

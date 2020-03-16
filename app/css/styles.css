@@ -14,6 +14,7 @@ body{
     border-radius: 10px;
 }
 .padding-all10px{
+    width: 100%;
     padding: 10px;
 }
 .padding-left10px{
@@ -44,6 +45,10 @@ body{
 .calculator__loading img{
             width:100%;
         }
+#calculator-message{
+    color: red;
+    margin:2px;
+}
 .lexicon__results{
         border: 1px solid green;
         height: 400px;
@@ -52,6 +57,9 @@ body{
 .lexicon__title{
         text-align: center;
         margin: 0px auto;
+    }
+.lexicon input{
+        padding:5px;
     }
 .main__nav{
         border-radius: 10px 10px 0px 0px;
@@ -109,4 +117,10 @@ body{
 .calculator-analize:hover{
     background-color: rgb(24, 24, 24);
     cursor: pointer;
+}
+#delete-word{
+    background-color: red;
+    color:#fff;
+    border:none;
+    padding: 5px;
 }

@@ -25,3 +25,9 @@
     background-color: rgb(24, 24, 24);
     cursor: pointer;
 }
+#delete-word{
+    background-color: red;
+    color:#fff;
+    border:none;
+    padding: 5px;
+}

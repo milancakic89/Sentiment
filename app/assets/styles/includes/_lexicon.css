@@ -8,5 +8,8 @@
         text-align: center;
         margin: 0px auto;
     }
+    input{
+        padding:5px;
+    }
 
 }

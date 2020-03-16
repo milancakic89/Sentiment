@@ -19,18 +19,20 @@
             <section id="lexicon-page" class="lexicon">
                 <div class="padding-bottom10px">
                     <h1 class="lexicon__title">Lexicon</h1>
-                    <label for="Positive">Positive</label>
-                    <input type="radio" id="positive" name="lexicon" value="Positive">
-                    <label for="Negative">Negative</label>
-                    <input type="radio" id="negative" name="lexicon" value="Negative">
-                    <label for="All">All</label>
-                    <input type="radio" id="all" name="lexicon" value="All">
+                    <div class="padding-all10px">
+                        <label for="Positive">Positive</label>
+                        <input type="radio" id="positive" name="lexicon" value="Positive">
+                        <label for="Negative">Negative</label>
+                        <input type="radio" id="negative" name="lexicon" value="Negative">
+                        <label for="All">All</label>
+                        <input type="radio" id="all" name="lexicon" value="All">
+                    </div>
                 </div>
                 <section class="lexicon__results">
                     <article>
                         <input class="lexcon-input" type="text" value="some input"/>
                         <input class="lexcon-input" type="number" value="0"/>
-                        <button>Delete</button>
+                        <button id="delete-word">Delete</button>
                     </article>
                 </section>
                 <button class="lexicon-save">SAVE</button>   
@@ -40,7 +42,8 @@
                     <h3>Text to analize:</h3>
                     <textarea class="calculator__textarea"></textarea><br>
                     <h3>Or upload a .txt file</h3>
-                    <input type="file"/><br><br>
+                    <p id="calculator-message"></p>
+                    <input id="file-upload" type="file"/><br><br>
                     <button class="calculator-analize" id="analize">Analize</button>
                     <section class="calculator__results">
                         <div id="loading_animation" class="calculator__loading hide-display">
@@ -49,6 +52,7 @@
                         <div id="analize-rezult" class="calculator__analize__result hide-display">
                             <h3>Document result:</h3>
                             <h4>Positive</h4>
+                            <h4>Neutral</h4>
                             <h4>Negative</h4>
                             <h2>Document details</h2>
                         </div>
