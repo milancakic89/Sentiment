@@ -1,0 +1,27 @@
+.main{
+    &__nav{
+        border-radius: 10px 10px 0px 0px;
+        &__ul{
+            width: 100%;
+            border-radius: 10px 10px 0px 0px;
+            text-align: center;
+            background-color: $navigationList;
+          
+            &__li{
+                list-style:none;
+                padding:10px;
+                display:inline-block;
+                color: $navigationItemColor;
+
+            }
+            &__li:hover{
+                cursor: pointer;
+                background-color: $navigationItemHover;
+            }
+           
+        }
+    }
+}
+.active{
+    background-color: $navigationItemHover;
+}

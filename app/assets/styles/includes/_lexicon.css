@@ -1,0 +1,12 @@
+.lexicon{
+    &__results{
+        border: 1px solid green;
+        height: 400px;
+        background-color: $lexiconBackground;
+    }
+    &__title{
+        text-align: center;
+        margin: 0px auto;
+    }
+
+}

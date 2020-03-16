@@ -1,0 +1,19 @@
+.calculator{
+    &__results{
+        border-top: 2px solid black;
+    }
+    &__textarea{
+        width: 100%;
+        overflow-y: auto;
+        height: 250px;
+    }
+    &__loading{
+       
+        max-width: 100px;
+        margin: 0 auto;
+        img{
+            width:100%;
+        }
+    }
+
+}

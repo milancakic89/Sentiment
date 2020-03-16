@@ -1,0 +1,27 @@
+.lexicon-save{
+    padding: 5px 15px;
+    margin: 15px 5px;
+    border: none;
+    color: #fff;
+    background-color: rgb(3, 161, 82);
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+.lexicon-save:hover{
+    background-color: rgb(1, 112, 75);
+    cursor: pointer;
+}
+.calculator-analize{
+    padding: 5px 15px;
+    margin: 15px 5px;
+    border: none;
+    color: #fff;
+    background-color: rgb(59, 59, 59);
+   
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+.calculator-analize:hover{
+    background-color: rgb(24, 24, 24);
+    cursor: pointer;
+}

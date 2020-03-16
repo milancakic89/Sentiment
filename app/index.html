@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Sentiment Analizator</title>
+</head>
+<body>
+    <section class="container">
+        <div class="padding-bottom10px">
+            <section class="main">
+                <nav class="main__nav">
+                    <ul class="main__nav__ul">
+                        <li id="lexicon-li" class="main__nav__ul__li active">Lexicon</li><li id="calculator-li" class="main__nav__ul__li">Calculator</li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="lexicon-page" class="lexicon">
+                <div class="padding-bottom10px">
+                    <h1 class="lexicon__title">Lexicon</h1>
+                    <label for="Positive">Positive</label>
+                    <input type="radio" id="positive" name="lexicon" value="Positive">
+                    <label for="Negative">Negative</label>
+                    <input type="radio" id="negative" name="lexicon" value="Negative">
+                    <label for="All">All</label>
+                    <input type="radio" id="all" name="lexicon" value="All">
+                </div>
+                <section class="lexicon__results">
+                    <article>
+                        <input class="lexcon-input" type="text" value="some input"/>
+                        <input class="lexcon-input" type="number" value="0"/>
+                        <button>Delete</button>
+                    </article>
+                </section>
+                <button class="lexicon-save">SAVE</button>   
+            </section>
+            <section id="calculator-screen" class="calculator hide-display">
+                <div class="padding-all10px">
+                    <h3>Text to analize:</h3>
+                    <textarea class="calculator__textarea"></textarea><br>
+                    <h3>Or upload a .txt file</h3>
+                    <input type="file"/><br><br>
+                    <button class="calculator-analize" id="analize">Analize</button>
+                    <section class="calculator__results">
+                        <div id="loading_animation" class="calculator__loading hide-display">
+                            <img src="./assets/img/loading.gif"/>
+                        </div>
+                        <div id="analize-rezult" class="calculator__analize__result hide-display">
+                            <h3>Document result:</h3>
+                            <h4>Positive</h4>
+                            <h4>Negative</h4>
+                            <h2>Document details</h2>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+       
+    </section>
+   <script src="./bundle/bundle.js"></script>
+</body>
+</html>

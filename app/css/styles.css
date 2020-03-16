@@ -1,0 +1,112 @@
+.test-picket{
+    background-color: rgb(245, 37, 37);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(44, 40, 40);
+}
+.container{
+    background-color: white;
+    max-width: 800px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+.padding-all10px{
+    padding: 10px;
+}
+.padding-left10px{
+    padding-left: 10px;
+}
+.padding-right10px{
+    padding-right: 10px;
+}
+.padding-top10px{
+    padding-top: 10px;
+}
+.padding-bottom10px{
+    padding-bottom: 10px;
+}
+.calculator__results{
+        border-top: 2px solid black;
+    }
+.calculator__textarea{
+        width: 100%;
+        overflow-y: auto;
+        height: 250px;
+    }
+.calculator__loading{
+       
+        max-width: 100px;
+        margin: 0 auto;
+    }
+.calculator__loading img{
+            width:100%;
+        }
+.lexicon__results{
+        border: 1px solid green;
+        height: 400px;
+        background-color: rgb(167, 167, 167);
+    }
+.lexicon__title{
+        text-align: center;
+        margin: 0px auto;
+    }
+.main__nav{
+        border-radius: 10px 10px 0px 0px;
+    }
+.main__nav__ul{
+            width: 100%;
+            border-radius: 10px 10px 0px 0px;
+            text-align: center;
+            background-color: rgb(231, 100, 100);
+           
+        }
+.main__nav__ul__li{
+                list-style:none;
+                padding:10px;
+                display:inline-block;
+                color: #fff;
+
+            }
+.main__nav__ul__li:hover{
+                cursor: pointer;
+                background-color: rgb(245, 37, 37);
+            }
+.active{
+    background-color: rgb(245, 37, 37);
+}
+.show-display{
+    display: block;
+}
+.hide-display{
+    display: none;
+}
+.lexicon-save{
+    padding: 5px 15px;
+    margin: 15px 5px;
+    border: none;
+    color: #fff;
+    background-color: rgb(3, 161, 82);
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+.lexicon-save:hover{
+    background-color: rgb(1, 112, 75);
+    cursor: pointer;
+}
+.calculator-analize{
+    padding: 5px 15px;
+    margin: 15px 5px;
+    border: none;
+    color: #fff;
+    background-color: rgb(59, 59, 59);
+   
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+.calculator-analize:hover{
+    background-color: rgb(24, 24, 24);
+    cursor: pointer;
+}
