@@ -1,12 +1,19 @@
 const Elements = require('./Elements');
-const Listeners = require('./EventListeners');
+const Listeners = require('./Navigation');
+const Saving = require('./Saving');
+
+
 class UI{
+      //creating lexicon rows
     static createRows(data){
         data.forEach(element => {
-             createEl(element); 
-        });
-        
+             createEl(element);
+        });  
     }
+
+}
+exports.createSingle = function(element){
+    createEl(element);
 }
 function createEl(element){
             let article = document.createElement('article');
@@ -14,21 +21,30 @@ function createEl(element){
             let inputTwo = document.createElement('input')
             let button = document.createElement('button')
  
-            inputOne.className = "lexcon-input";
             inputOne.type = 'text';
             inputOne.value = element.word;
+            inputOne.addEventListener('change', Saving.saveLexicon);
 
-            inputTwo.className = "lexcon-input";
             inputTwo.type = 'number';
             inputTwo.value = element.sentiment;
+            inputTwo.addEventListener('change', Saving.changing);
+            
 
             button.className = "delete-word";
             button.value = element.word;
             button.textContent = 'Delete';
             button.addEventListener('click', Listeners.deleteWord)
 
-
-            article.className = "result-single";
+            if(element.sentiment === 0){
+                inputOne.className = "lexcon-input";
+                inputTwo.className = "lexcon-input";
+            }else if(element.sentiment > 0){
+                inputOne.className = "lexcon-input-positive";
+                inputTwo.className = "lexcon-input-positive";
+            }else if(element.sentiment < 0){
+                inputOne.className = "lexcon-input-negative";
+                inputTwo.className = "lexcon-input-negative";
+            }
             article.appendChild(inputOne);
             article.appendChild(inputTwo);
             article.appendChild(button);
@@ -37,11 +53,3 @@ function createEl(element){
 }
 
 module.exports = UI;
-
-/*
-                    <article class="result-single">
-                        <input class="lexcon-input" type="text" value="some input"/>
-                        <input class="lexcon-input" type="number" value="0"/>
-                        <button id="delete-word" value="">Delete</button>
-                    </article><br>
-*/

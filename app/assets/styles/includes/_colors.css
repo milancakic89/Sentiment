@@ -1,11 +1,11 @@
-$bodyColor: rgb(44, 40, 40);
-$navigation: rgb(231, 100, 100);
-$navigationList: rgb(231, 100, 100);
+$bodyColor: rgb(68, 67, 67);
+
+$navigationList: rgb(31, 30, 30);;
 $navigationItem: rgb(231, 100, 100);
 $navigationItemColor: #fff;
 $navigationItemHover: rgb(245, 37, 37);
 $lexiconBackground: rgb(167, 167, 167);
 
 .test-picket{
-    background-color: rgb(245, 37, 37);
+    background-color: rgb(68, 67, 67);
 }

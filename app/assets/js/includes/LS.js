@@ -1,5 +1,6 @@
 const Lexicon = require('./Lexicon');
 const UI = require('./UI');
+const Elements = require('./Elements');
 
 //first time storage is empty
 exports.initLocalStorageLexicon = function(){
@@ -46,4 +47,12 @@ exports.removeOneFromStorage = function(removed){
 async function newStorageToSet(newStorage){
     let data = JSON.stringify(newStorage);
     localStorage.setItem('lexicon', data);
+}
+exports.saveStorage = function (newStorage){
+    let data = JSON.stringify(newStorage);
+    localStorage.setItem('lexicon', data);
+    Elements.savingFeedback.textContent = "Saving..."
+    setTimeout(saved=>{
+        Elements.savingFeedback.textContent = ""
+    },2000);
 }
