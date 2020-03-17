@@ -52,12 +52,12 @@ function showLoading(){
      text.forEach(element => {
         lexicon.forEach(lex =>{
             if(element.toUpperCase() == lex.word.toUpperCase()){
-                if(lex.sentiment === 0){
+                if(Number(lex.sentiment) === 0){
                     neutral++;
-                }else if (lex.sentiment > 0){
+                }else if (Number(lex.sentiment) > 0){
                     positive++;
                     positiveTotal += Number(lex.sentiment);
-                }else if(lex.sentiment < 0){
+                }else if(Number(lex.sentiment) < 0){
                     negative++;
                     negativeTotal -= Number(lex.sentiment);
                 }
@@ -101,12 +101,12 @@ function showLoading(){
      text.forEach(element => {
         lexicon.forEach(lex =>{
             if(element.toUpperCase() == lex.word.toUpperCase()){
-                if(lex.sentiment === 0){
+                if(Number(lex.sentiment) === 0){
                     neutral++;
-                }else if (lex.sentiment > 0){
+                }else if (Number(lex.sentiment) > 0){
                     positive++;
                     positiveTotal += Number(lex.sentiment);
-                }else if (lex.sentiment < 0){
+                }else if (Number(lex.sentiment) < 0){
                     negative++;
                     negativeTotal -= Number(lex.sentiment);
                 }
