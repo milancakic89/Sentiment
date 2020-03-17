@@ -4,31 +4,47 @@ const LS = require('./LS');
 exports.analizeDocument = function(){
     let input = Elements.buttonUpload;
     let textArea = Elements.calculatorTextArea.value;
-    let message = '';
     if(input.files[0]){
-        message = '';
             let reader = new FileReader();
             reader.onload = function(){
                 convertTextToArray(reader.result);
             };
             reader.readAsText(input.files[0]);   
-        }else{
-            message = 'File not selected'
-        }
-    Elements.calculatorMessage.textContent = message;
-
+    }
     if(textArea !== ''){
         let newText = textArea.split(/[ ,]+/);
+        let words = []
+        newText.forEach(element => {
+            // removing . at the end, also ? and ! to get clean word
+           if(element.length){
+               let word = element;
+                while(word[word.length - 1] === '.' || word[word.length - 1] === '!' || word[word.length - 1] === '?'){
+                   word = word.slice(0, -1);
+                } 
+                words.push(word);     
+           }
+        });
         LS.getStorage().then(lexicon=>{
-            compareTextAreaToLexicon(newText, lexicon);
+            compareTextAreaToLexicon(words, lexicon);
         })
     }
     showLoading(); 
 }
 function convertTextToArray(text){
-let newText = text.split(/[ ,]+/);
+    let newText = text.split(/[ ,]+/);
+    let words = []
+    newText.forEach(element => {
+       if(element.length){
+           let word = element;
+            while(word[word.length - 1] === '.' || word[word.length - 1] === '!' || word[word.length - 1] === '?'){
+               word = word.slice(0, -1);
+            } 
+            words.push(word);     
+       }
+    });
+
     LS.getStorage().then(lexicon=>{
-        compareTextToLexicon(newText, lexicon);
+        compareTextToLexicon(words, lexicon);
     })
 }
 function showLoading(){
@@ -66,7 +82,6 @@ function showLoading(){
      });
   
      overal = (positiveTotal + (-negativeTotal)).toFixed(2);
-
      Elements.positiveResult.textContent = positive;
      Elements.negativeResult.textContent = negative;
      Elements.neutralResult.textContent = neutral;
@@ -115,7 +130,6 @@ function showLoading(){
      });
    
      overal = (positiveTotal + (-negativeTotal)).toFixed(2);
-
      Elements.positiveTextAreaResult.textContent = positive;
      Elements.negativeTextAreaResult.textContent = negative;
      Elements.neutralTextAreaResult.textContent = neutral;
