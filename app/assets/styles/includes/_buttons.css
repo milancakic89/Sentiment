@@ -25,9 +25,15 @@
     background-color: rgb(24, 24, 24);
     cursor: pointer;
 }
-#delete-word{
+.delete-word{
     background-color: red;
     color:#fff;
     border:none;
     padding: 5px;
+    margin-left: 3px;
+}
+.removing{
+    opacity: 0;
+    background-color: red;
+    transition: all 0.3s ease-out;
 }

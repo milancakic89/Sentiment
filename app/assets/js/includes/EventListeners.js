@@ -1,4 +1,5 @@
 const Elements = require('./Elements');
+const LS = require("./LS");
 
 exports.getCalculatorPage = function(){
     Elements.lexiconPage.classList.add('hide-display');
@@ -16,37 +17,7 @@ exports.getLexiconPage = function(){
     Elements.lexiconLi.classList.add('active');
     Elements.calculatorLi.classList.remove('active');
 }
-
-function showLoading(){
-   Elements.resultScreen.classList.add('hide-display');
-   Elements.calculatorAnimation.classList.remove('hide-display');
-   setTimeout(delay => showResults() ,2000);
-}
-function showResults(){
-    Elements.calculatorAnimation.classList.add('hide-display');
-    Elements.resultScreen.classList.remove('hide-display');
+exports.deleteWord = function(e){
+    LS.removeOneFromStorage(e.target)
 }
 
-
-exports.analizeDocument = function(){
-    let input = Elements.buttonUpload;
-
-    if(input.files[0]){
-            let reader = new FileReader();
-            reader.onload = function(){
-                convertTextToArray(reader.result);
-            };
-            reader.readAsText(input.files[0]);   
-        }
-    
-
-
-    //Elements.calculatorMessage.textContent = message;
-    showLoading();
-   // return resultText;
-    
-}
-function convertTextToArray(text){
-   let newText = text.split(/[ ,]+/).filter(Boolean);
-    console.log(newText);
-}

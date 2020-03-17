@@ -45,9 +45,35 @@ body{
 .calculator__loading img{
             width:100%;
         }
+.calculator__analize__stats{
+            font-size: 1.1rem;
+        }
+.calculator__analize__overal{
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
 #calculator-message{
     color: red;
     margin:2px;
+}
+.positive{
+    color: green;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.negative{
+    color: red;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.neutral{
+    color: black;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.overal{
+        font-weight: 700;
+        font-size: 1.5rem;
 }
 .lexicon__results{
         border: 1px solid green;
@@ -118,9 +144,15 @@ body{
     background-color: rgb(24, 24, 24);
     cursor: pointer;
 }
-#delete-word{
+.delete-word{
     background-color: red;
     color:#fff;
     border:none;
     padding: 5px;
+    margin-left: 3px;
+}
+.removing{
+    opacity: 0;
+    background-color: red;
+    transition: all 0.3s ease-out;
 }
