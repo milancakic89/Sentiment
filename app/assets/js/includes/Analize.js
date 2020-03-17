@@ -38,6 +38,7 @@ function showLoading(){
     let neutral = 0;
     let positiveTotal = 0;
     let negativeTotal = 0;
+    let overal = 0;
      text.forEach(element => {
         lexicon.forEach(lex =>{
             if(element.toUpperCase() == lex.word.toUpperCase()){
@@ -48,17 +49,25 @@ function showLoading(){
                     positiveTotal += lex.sentiment;
                 }else{
                     negative++;
-                    negativeTotal += lex.sentiment;
+                    negativeTotal -= lex.sentiment;
                 }
             }else{
                // console.log(element.toUpperCase() +'!=='+ lex.word.toUpperCase())
             }
         })
      });
-     console.log('statistics')
-     console.log("positive: "+positive)
-     console.log("negative: "+negative)
-     console.log("neutral: "+neutral)
-     console.log('Positive Total: '+positiveTotal.toFixed(2))
-     console.log('Negative Total: '+negativeTotal.toFixed(2))
+     overal = (positiveTotal -negativeTotal).toFixed(2);
+
+     Elements.positiveResult.textContent = positive;
+     Elements.negativeResult.textContent = negative;
+     Elements.neutralResult.textContent = neutral;
+     Elements.overalResult.textContent = overal;
+
+     if(overal > 0){
+         Elements.overalResult.className = 'positive-overal';
+     }else if(overal === 0){
+         Elements.overalResult.className = 'neutral-overal';
+     }else{
+         Elements.overalResult.className = 'negative-overal';
+     }
  }

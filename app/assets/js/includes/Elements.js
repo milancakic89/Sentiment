@@ -17,4 +17,4 @@ exports.calculatorMessage = document.getElementById('calculator-message');
 exports.positiveResult = document.querySelector('.positive');
 exports.negativeResult = document.querySelector('.negative');
 exports.neutralResult = document.querySelector('.neutral');
-exports.overalResult = document.querySelector('.overal');
+exports.overalResult = document.getElementById('overal');

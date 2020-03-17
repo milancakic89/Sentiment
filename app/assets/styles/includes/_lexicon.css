@@ -3,6 +3,7 @@
         border: 1px solid green;
         height: 400px;
         background-color: $lexiconBackground;
+        overflow-y: auto;
     }
     &__title{
         text-align: center;

@@ -1,0 +1,15 @@
+.negative-overal{
+    color: rgb(241, 44, 44);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.positive-overal{
+    color: rgb(1, 155, 53);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.neutral-overal{
+    color: rgb(48, 47, 47);
+    font-size: 1.2rem;
+    font-weight: 700;
+}

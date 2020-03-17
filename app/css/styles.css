@@ -79,6 +79,7 @@ body{
         border: 1px solid green;
         height: 400px;
         background-color: rgb(167, 167, 167);
+        overflow-y: auto;
     }
 .lexicon__title{
         text-align: center;
@@ -155,4 +156,19 @@ body{
     opacity: 0;
     background-color: red;
     transition: all 0.3s ease-out;
+}
+.negative-overal{
+    color: rgb(241, 44, 44);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.positive-overal{
+    color: rgb(1, 155, 53);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.neutral-overal{
+    color: rgb(48, 47, 47);
+    font-size: 1.2rem;
+    font-weight: 700;
 }
