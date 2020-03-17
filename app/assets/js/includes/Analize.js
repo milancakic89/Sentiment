@@ -56,26 +56,28 @@ function showLoading(){
                     neutral++;
                 }else if (lex.sentiment > 0){
                     positive++;
-                    positiveTotal += lex.sentiment;
-                }else{
+                    positiveTotal += Number(lex.sentiment);
+                }else if(lex.sentiment < 0){
                     negative++;
-                    negativeTotal -= lex.sentiment;
+                    negativeTotal -= Number(lex.sentiment);
                 }
             }
         })
      });
-     overal = (positiveTotal -negativeTotal).toFixed(2);
+  
+     overal = (positiveTotal + (-negativeTotal)).toFixed(2);
 
      Elements.positiveResult.textContent = positive;
      Elements.negativeResult.textContent = negative;
      Elements.neutralResult.textContent = neutral;
      Elements.overalResult.textContent = overal;
 
+
      if(overal > 0){
          Elements.overalResult.className = 'positive-overal';
      }else if(overal === 0){
          Elements.overalResult.className = 'neutral-overal';
-     }else{
+     }else if(overal < 0){
          Elements.overalResult.className = 'negative-overal';
      }
  }
@@ -103,15 +105,16 @@ function showLoading(){
                     neutral++;
                 }else if (lex.sentiment > 0){
                     positive++;
-                    positiveTotal += lex.sentiment;
-                }else{
+                    positiveTotal += Number(lex.sentiment);
+                }else if (lex.sentiment < 0){
                     negative++;
-                    negativeTotal -= lex.sentiment;
+                    negativeTotal -= Number(lex.sentiment);
                 }
             }
         })
      });
-     overal = (positiveTotal -negativeTotal).toFixed(2);
+   
+     overal = (positiveTotal + (-negativeTotal)).toFixed(2);
 
      Elements.positiveTextAreaResult.textContent = positive;
      Elements.negativeTextAreaResult.textContent = negative;

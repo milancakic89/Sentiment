@@ -72,29 +72,6 @@ body{
     margin:2px;
 }
 
-.positive{
-    color: green;
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-
-.negative{
-    color: red;
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-
-.neutral{
-    color: black;
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-
-.overal{
-        font-weight: 700;
-        font-size: 1.5rem;
-}
-
 .lexicon__results{
         border: 1px solid green;
         height: 400px;
@@ -228,4 +205,30 @@ body{
     color: rgb(48, 47, 47);
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+.positive,
+.text-positive{
+    color: green;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.negative,
+.text-negative{
+    color: red;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.neutral,
+.text-neutral{
+    color: black;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.overal{
+        font-weight: 700;
+        font-size: 1.5rem;
 }

@@ -31,22 +31,3 @@
     color: red;
     margin:2px;
 }
-.positive{
-    color: green;
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-.negative{
-    color: red;
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-.neutral{
-    color: black;
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-.overal{
-        font-weight: 700;
-        font-size: 1.5rem;
-}
