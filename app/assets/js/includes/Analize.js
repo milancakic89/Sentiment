@@ -90,7 +90,7 @@ function showLoading(){
 
      if(overal > 0){
          Elements.overalResult.className = 'positive-overal';
-     }else if(overal === 0){
+     }else if(overal == 0){
          Elements.overalResult.className = 'neutral-overal';
      }else if(overal < 0){
          Elements.overalResult.className = 'negative-overal';
@@ -139,7 +139,7 @@ function showLoading(){
          Elements.overalTextAreaResult.className = 'positive-overal';
      }else if(overal === 0){
          Elements.overalTextAreaResult.className = 'neutral-overal';
-     }else{
+     }else if(overal < 0){
          Elements.overalTextAreaResult.className = 'negative-overal';
      }
  }
